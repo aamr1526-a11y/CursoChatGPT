@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Escuela de Fútbol Infantil Los Campeones</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:white;
+color:#333;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1600&q=80');
+
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.logo{
+width:420px;
+max-width:90%;
+background:white;
+padding:15px;
+border-radius:25px;
+box-shadow:0 0 25px rgba(255,255,255,.6);
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:3rem;
+color:white;
+}
+
+.hero p{
+font-size:1.2rem;
+color:white;
+margin-top:15px;
+line-height:1.8;
+}
+
+.boton{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+background:#d62828;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:.3s;
+}
+
+.boton:hover{
+background:#0f8f4b;
+}
+
+/* PROMOCIONES */
+
+.promociones{
+padding:80px 10%;
+background:#0f8f4b;
+color:white;
+text-align:center;
+}
+
+.promociones h2{
+font-size:2.5rem;
+margin-bottom:40px;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.card{
+background:white;
+color:#333;
+padding:30px;
+width:280px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.card h3{
+color:#d62828;
+margin-bottom:15px;
+}
+
+/* CANCHA */
+
+.cancha{
+padding:100px 10%;
+text-align:center;
+
+background:
+linear-gradient(rgba(255,255,255,.88),
+rgba(255,255,255,.88)),
+url('https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1600&q=80');
+
+background-size:cover;
+background-position:center;
+}
+
+.cancha h2{
+color:#0f8f4b;
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+/* CAMISETAS */
+
+.mundial{
+padding:80px 10%;
+text-align:center;
+}
+
+.mundial h2{
+color:#0f8f4b;
+font-size:2.5rem;
+margin-bottom:50px;
+}
+
+.camisetas{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.camiseta{
+width:150px;
+height:170px;
+
+clip-path:polygon(
+20% 0,
+35% 0,
+45% 12%,
+55% 12%,
+65% 0,
+80% 0,
+100% 20%,
+85% 35%,
+85% 100%,
+15% 100%,
+15% 35%,
+0 20%
+);
+
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:bold;
+box-shadow:0 8px 15px rgba(0,0,0,.2);
+}
+
+/* BANDERAS */
+
+.mexico{
+background:linear-gradient(90deg,green 33%,white 33%,white 66%,red 66%);
+}
+
+.argentina{
+background:linear-gradient(180deg,#75AADB 33%,white 33%,white 66%,#75AADB 66%);
+}
+
+.brasil{
+background:#009739;
+color:white;
+}
+
+.espana{
+background:linear-gradient(180deg,#AA151B 25%,#F1BF00 25%,#F1BF00 75%,#AA151B 75%);
+}
+
+.francia{
+background:linear-gradient(90deg,#0055A4 33%,white 33%,white 66%,#EF4135 66%);
+}
+
+.alemania{
+background:linear-gradient(180deg,black 33%,red 33%,red 66%,gold 66%);
+color:white;
+}
+
+.japon{
+background:white;
+border:2px solid #ddd;
+position:relative;
+}
+
+.japon::before{
+content:'';
+position:absolute;
+width:55px;
+height:55px;
+background:red;
+border-radius:50%;
+}
+
+.japon span{
+position:relative;
+z-index:2;
+margin-top:90px;
+}
+
+/* QR */
+
+.qr-section{
+padding:80px 10%;
+text-align:center;
+background:#f7f7f7;
+}
+
+.qr-section h2{
+color:#0f8f4b;
+margin-bottom:15px;
+}
+
+.qr{
+width:230px;
+border-radius:15px;
+background:white;
+padding:10px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* CONTACTO */
+
+.contacto{
+padding:80px 10%;
+background:#d62828;
+color:white;
+text-align:center;
+}
+
+.contacto h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+padding:20px;
+text-align:center;
+border-top:2px solid #ddd;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+width:70px;
+height:70px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:38px;
+color:white;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+z-index:999;
+transition:.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+.logo{
+width:260px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="logo.png" class="logo" alt="Los Campeones">
+
+<h1>Escuela de Fútbol Infantil  </h1>
+ <h1> "Los Campeones"</h1>
+<p>
+⚽ Formación deportiva, disciplina, diversión y valores para los futuros campeones.
+</p>
+
+<a href="#promo" class="boton">
+Inscríbete Hoy
+</a>
+
+</div>
+
+</section>
+
+<section class="promociones" id="promo">
+
+<h2>🏆 Promociones Especiales por el Mundial</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Inscripción GRATIS</h3>
+<p>Promoción limitada durante la temporada mundialista.</p>
+</div>
+
+<div class="card">
+<h3>20% de Descuento</h3>
+<p>Para hermanos inscritos.</p>
+</div>
+
+<div class="card">
+<h3>Uniforme Especial</h3>
+<p>Incluido en nuevas inscripciones.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="cancha">
+
+<h2>⚽ ENTRENA COMO UN CAMPEÓN </h2>
+
+<p>
+Las mejores canchas, entrenadores certificados y programas adaptados para cada edad.
+</p>
+
+</section>
+
+<section class="mundial">
+
+<h2>🌎 Escoge tu uniforme conforme a la Selección del Mundo que más te guste </h2>
+
+<div class="camisetas">
+
+<div class="camiseta mexico">México</div>
+<div class="camiseta argentina">Argentina</div>
+<div class="camiseta brasil">Brasil</div>
+<div class="camiseta espana">España</div>
+<div class="camiseta francia">Francia</div>
+<div class="camiseta alemania">Alemania</div>
+
+<div class="camiseta japon">
+<span>Japón</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="qr-section">
+
+<h2>📲 Escanea el Código QR</h2>
+
+<p>
+Contáctanos directamente desde WhatsApp.
+</p>
+<p>
+Av. Independencia #2613, Fracc.Los Pinos. Puebla.
+<p>
+<br>
+
+<img
+class="qr"
+src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://wa.me/2224364548"
+alt="QR WhatsApp">
+
+</section>
+
+<section class="contacto">
+
+<h2>⚽ Inscripciones Abiertas</h2>
+
+<p>
+Únete a la mejor escuela de fútbol infantil de la Angelópolis.
+</p>
+
+<a href="https://wa.me/2224364548" class="boton" target="_blank">
+Solicitar Información
+</a>
+
+</section>
+
+<footer>
+
+© 2026 Escuela de Fútbol Infantil Los Campeones
+
+</footer>
+
+<a href="https://wa.me/2224364548"
+class="whatsapp"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+</body>
+</html>
